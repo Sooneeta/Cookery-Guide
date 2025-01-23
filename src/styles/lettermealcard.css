@@ -1,0 +1,21 @@
+.letter-meal-container {
+    text-align: center;
+    padding: 1.5em 0px;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    box-shadow: 0 4px 8px rgba(192, 182, 182, 0.8);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.letter-meal-container:hover {
+    background-color: #F49427;
+    color: white;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5); 
+}
+
+.meal-name{
+    padding: 0.8em;
+    font-family: "Gilroy-Bold";
+}

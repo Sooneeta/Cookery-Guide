@@ -1,0 +1,100 @@
+.img-container {
+    height: 250px;
+    background-image: url("../src/assets/imgbackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-top: 5em;
+  }
+
+  .search-container {
+    display: flex;
+    background-color: white;
+    width: 30%;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 30px;
+    gap: 10px;
+    
+  }
+
+  .search-input {
+    border: none;
+    height: 36px;
+    width: 90%;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  #search-icon {
+    color: grey;
+  }
+  
+
+  
+  
+  .letter-circle-container {
+    padding: 2.2em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .letter-circle {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .letter-circle:hover,
+  .letter-circle.active {
+    background-color: #F49427;
+    color: white;
+    font-weight: bold;
+  }
+  
+
+  .letter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    padding: 2em 1em;
+    row-gap: 3em;
+    max-width: 80%;
+    
+  }
+  
+  .meals-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+       
+  
+}
+
+.category-container{
+    padding: 3em 0em 2em 0em;
+    color: #F49427;
+    font-family: "Gillroy-Bold";
+    max-width: 85%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 4em;
+}

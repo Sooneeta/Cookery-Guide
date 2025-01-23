@@ -1,0 +1,51 @@
+.landing-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 0em 0em 2em;
+    
+}
+
+.text-section{
+    background-color: #F49427;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5em;
+    padding: 2em 0em 0em 3em;
+    width: 45%;
+}
+
+.text-section span, h1, p{
+    background-color: inherit;
+}
+
+h1{
+    font-family: "Gilroy-Bold";
+    font-size: 3rem;
+}
+
+p{
+  font-family: "Gilroy-Regular";
+  font-size: 1.3rem;
+}
+
+.signup-button{
+    background-color: white;
+    color: #F49427;
+    border: none;
+    font-family: "Gilroy-Bold";
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 0.1em 0.5em;
+    margin-top: 0.8em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+}
+
+.categories-container{
+    height: 100%;
+}

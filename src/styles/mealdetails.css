@@ -1,0 +1,111 @@
+.meal-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 3rem;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(192, 182, 182, 0.8);
+  }
+  
+  .meal-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .meal-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .meal-info {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+  
+  .meal-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .meal-category,
+  .meal-area {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .meal-category a,
+  .meal-area a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .meal-category a:hover,
+  .meal-area a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  .meal-ingredients {
+    margin-top: 2rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .meal-ingredients h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .meal-ingredients ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .meal-ingredients li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background: #e9ecef;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+  
+  .meal-instructions {
+    margin-top: 2rem;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .meal-instructions h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+    text-transform: uppercase;
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 0.5rem;
+  }
+  
+  .meal-instructions p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+ 

@@ -1,0 +1,26 @@
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2.5em;
+    justify-items: center;
+    align-items: center;
+    padding: 2em 3.5em;
+  }
+  
+.category-horizontal {
+    display: flex;
+    padding-bottom: 1em;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2.5em;
+  }
+  
+  .category-header {
+    text-align: center;
+    padding: 20px 0px;
+  }
+  
+
+
+  
