@@ -1,0 +1,29 @@
+.meal-container {
+    padding: 1.5em 0px;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    box-shadow: 0 4px 8px rgba(192, 182, 182, 0.8);
+    border-radius: 10px;
+    place-items: center;  
+    text-align: center;
+    text-decoration: none; 
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.meal-container:hover {
+    background-color: #F49427;
+    color: white;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1); 
+}
+
+
+
+.meal-name {
+    padding-top: 0.5em;
+    font-family: "Gilroy-Bold";
+}
+
+

@@ -1,24 +1,41 @@
-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-   
+wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
-.header{
-    font-family: "Gilroy-Bold";
-    color: #F49427;
-    text-align: center;
-    text-decoration: underline;
+.headerWrapper {
+  width: 97%;
+  background-color: #ffd580;
+  color: white;
+  place-self: center;
+}
+
+.header {
+  font-size: 3rem;
+  font-family: "Gilroy-Bold";
+  text-align: center;
+  margin-top: 0.3em;
+  animation: slideText 10s linear infinite;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .meals {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 40px;
-    max-width: 80%;
-    margin: auto;
-    padding: 2em;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  width: 80%;
+  margin: auto;
+  padding: 3.5em 1em 2em 1em;
+}

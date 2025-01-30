@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react";
-
-import { useParams} from "react-router-dom";
-import { LetterMealCard} from "../components/LetterMealCard";
+import { useParams } from "react-router-dom";
+import { MealCard } from "../components/MealCard";
 import { getMealByCategory } from "../api/getMeal";
 import "../styles/search.css";
-
-
+import { Loader } from "../components/Loader";
 
 export const Categorymeal = () => {
-
-  const {categoryName} = useParams();
+  const { categoryName } = useParams();
   const [categorymealResults, setCategoryMealResults] = useState([]);
-  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (categoryName) {
@@ -19,6 +16,7 @@ export const Categorymeal = () => {
         .then((response) => {
           console.log("API Response:", response.data);
           setCategoryMealResults(response?.data?.meals);
+          setLoading(false);
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
@@ -26,22 +24,28 @@ export const Categorymeal = () => {
     }
   }, [categoryName]);
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
-     <div className="wrapper">
-      <h1 className="header">Meals by {categoryName} </h1>
-      {categorymealResults.length > 0 && (
-        <div className="meals">
-          {categorymealResults.map((item, index) => (
-            <LetterMealCard
-              key={index}
-              name={item.strMeal}
-              image={item.strMealThumb}
-              id = {item.idMeal}
-            />
-          ))}
+      <div className="wrapper">
+        <div className="headerWrapper">
+          <h1 className="header">{categoryName} Meals</h1>
         </div>
-      )}
+        {categorymealResults.length > 0 && (
+          <div className="meals">
+            {categorymealResults.map((item, index) => (
+              <MealCard
+                key={index}
+                name={item.strMeal}
+                image={item.strMealThumb}
+                id={item.idMeal}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </>
   );
