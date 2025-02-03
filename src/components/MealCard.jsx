@@ -7,7 +7,13 @@ export const MealCard = (props) => {
   return (
     <>
       <Link to={`/mealdetails/${id}`} className="meal-container">
-        <img className="meal-image" src={image} alt={name} width={170} />
+        <img
+          className="meal-image"
+          src={image}
+          alt={name}
+          width={170}
+          loading="lazy"
+        />
         <h3 className="meal-name">{name}</h3>
       </Link>
     </>

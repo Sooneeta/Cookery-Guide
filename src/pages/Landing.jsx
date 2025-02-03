@@ -1,13 +1,12 @@
 import "../styles/landing.css";
 import FoodImage from "../assets/landingimg.webp";
-import { useAuth } from "../utils/AuthContext";
-import GoogleImage from "../assets/googleicon.png";
 import { Loader } from "../components/Loader";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Landing = () => {
-  const { user, signUpWithGoogle } = useAuth();
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const img = new Image();
@@ -22,6 +21,11 @@ export const Landing = () => {
       setLoading(false);
     };
   }, []);
+
+  const handleSignUpClick = (e) => {
+    e.preventDefault();
+    navigate("/signup");
+  };
 
   if (loading) {
     return <Loader />;
@@ -46,16 +50,12 @@ export const Landing = () => {
               and flavorful creations await your every craving.
             </p>
           </span>
-          {!user ? (
-            <span>
-              <button className="signup-button">
-                <img src={GoogleImage} alt="google-image" width={30} />
-                Sign up with Google
-              </button>
-            </span>
-          ) : (
-            <p>Welcome, {user.displayName}!</p>
-          )}
+
+          <span>
+            <button className="signup-button" onClick={handleSignUpClick}>
+              Sign up
+            </button>
+          </span>
         </section>
         <figure className="img-section">
           <img src={FoodImage} alt="food-image" width={560} loading="lazy" />

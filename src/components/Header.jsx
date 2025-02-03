@@ -1,10 +1,30 @@
 import { NavLink } from "react-router-dom";
 import TitleIcon from "../assets/titleicon.png";
 import "../styles/header.css";
-import { useAuth } from "../utils/AuthContext";
+import { useUserAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { MdOutlineLogout } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
 
 export const Header = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut } = useUserAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    navigate("/login");
+  };
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    console.log("logout button is clicked");
+    try {
+      await logOut();
+      navigate("/");
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
 
   return (
     <>
@@ -29,21 +49,24 @@ export const Header = () => {
           >
             Categories
           </NavLink>
-
           {user ? (
             <div className="profile-section">
               <img
-                src={user.photoURL || "default-profile.png"}
+                // src={user.photoURL || "default-profile.png"}
+                src={user.photoURL ? user.photoURL : <FaUserCircle />}
                 alt="profile"
-                width={40}
                 className="profile-pic"
               />
-              <button className="logout-button" onClick={logOut}>
-                Logout
+
+              <button className="logout-button" onClick={handleLogout}>
+                <MdOutlineLogout />
+                <span>Logout</span>
               </button>
             </div>
           ) : (
-            <button className="login-button">Login</button>
+            <button className="login-button" onClick={handleLogin}>
+              Login
+            </button>
           )}
         </nav>
       </header>

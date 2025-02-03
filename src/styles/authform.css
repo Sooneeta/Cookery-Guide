@@ -1,0 +1,110 @@
+.form-container {
+  background-color: #f9dfaa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy-Bold";
+}
+
+.form-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3em 2em;
+  border-radius: 20px;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
+.title-section h2 {
+  font-size: 2rem;
+}
+
+.form-subtitle {
+  font-size: 0.7rem;
+  font-family: "Gilroy-Regular";
+  font-weight: 600;
+}
+
+.email-input,
+.password-input {
+  border: none;
+  padding: 0.4em;
+  background-color: antiquewhite;
+}
+
+.email-input:focus,
+.password-input:focus {
+  outline: none;
+  background: none;
+}
+
+.email-section,
+.password-section {
+  display: flex;
+  gap: 0.3em;
+  padding: 0.6em 0.5em;
+  background-color: antiquewhite;
+  align-items: center;
+  border-radius: 10px;
+}
+
+form {
+  padding: 3em 1em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.submit-btn {
+  border: none;
+  padding: 0.7em 4.7em;
+  font-family: "Gilroy-Bold";
+  background-color: #f49427;
+  color: white;
+  font-size: 1rem;
+  border-radius: 55px;
+  cursor: pointer;
+}
+
+.link-text {
+  padding-top: 3.5em;
+  font-size: 0.8rem;
+}
+
+.link {
+  color: #f49427;
+}
+
+.googlebtn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  align-items: center;
+  font-family: "Gilroy-Bold";
+  padding: 1em 0em;
+}
+
+.google-btn {
+  display: flex;
+  justify-content: center;
+  background: none;
+  font-family: "Gilroy-Bold";
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5em 2.1em;
+  border-radius: 70px;
+  border: 1px solid #f49427;
+  cursor: pointer;
+}
