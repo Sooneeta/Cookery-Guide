@@ -5,7 +5,7 @@ import "../styles/authform.css";
 import { Link } from "react-router-dom";
 import { Alert } from "react-bootstrap";
 import { FcGoogle } from "react-icons/fc";
-import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 export const AuthForm = ({
   title,
