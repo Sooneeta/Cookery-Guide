@@ -23,7 +23,7 @@
 
 .nav-wrapper {
   display: flex;
-  flex-basis: 23%;
+  flex-basis: 20%;
   justify-content: space-between;
   align-items: center;
   margin-right: 0.5em;
@@ -44,8 +44,8 @@
 }
 
 .profile-pic {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
 }
 
@@ -60,14 +60,10 @@
   justify-content: center;
   background: none;
   border: none;
-  color: gray;
-  padding-left: 0.8em;
-  font-family: "Gilroy-Bold";
-  font-size: 1rem;
+  padding-left: 0.5em;
   cursor: pointer;
 }
 
 .error-section {
   padding-top: 1em;
-  color: red;
 }

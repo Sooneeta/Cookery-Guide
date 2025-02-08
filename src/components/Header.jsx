@@ -59,8 +59,11 @@ export const Header = () => {
               />
 
               <button className="logout-button" onClick={handleLogout}>
-                <MdOutlineLogout />
-                <span>Logout</span>
+                <MdOutlineLogout
+                  size="1.5rem"
+                  title="Click to Logout!"
+                  color="gray"
+                />
               </button>
             </div>
           ) : (
