@@ -1,22 +1,29 @@
 import { Header } from "./Header";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
 
 export const Layout = ({ children }) => {
   const location = useLocation();
-  const [showHeader, setShowHeader] = useState(true);
+  const [showLayout, setShowLayout] = useState(true);
 
   useEffect(() => {
     const isAuthPage =
       location.pathname === "/login" || location.pathname === "/signup";
-    setShowHeader(!isAuthPage);
+    setShowLayout(!isAuthPage);
   }, [location.pathname]);
 
   return (
     <>
-      {showHeader && <Header />}
+      <div
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+      >
+        {showLayout && <Header />}
 
-      {children}
+        <main style={{ flex: 1 }}>{children}</main>
+
+        {showLayout && <Footer />}
+      </div>
     </>
   );
 };

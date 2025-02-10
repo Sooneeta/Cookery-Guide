@@ -24,3 +24,12 @@
   font-family: "Gilroy-Bold";
   font-size: 1.3rem;
 }
+
+.view-recipe {
+  font-family: "Gilroy-SemiBold";
+  color: #e49b0f;
+}
+
+.meal-container:hover .view-recipe {
+  color: black;
+}

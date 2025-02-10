@@ -1,47 +1,14 @@
-.img-container {
-  height: 25vh;
-  background-image: url("../src/assets/imgbackground.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  padding-top: 2em;
-}
-
-.search-container {
-  display: flex;
-  background-color: white;
-  width: 35%;
-  align-items: center;
-  padding: 0 15px;
-  border-radius: 30px;
-  gap: 10px;
-}
-
-.search-input {
-  border: none;
-  height: 36px;
-  width: 95%;
-}
-
-.search-input:focus {
-  outline: none;
-}
-
-#search-icon {
-  color: grey;
-}
-
 .letter-circle-container {
-  padding: 2.2em 1em;
+  padding: 5em 1em 2em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+}
+
+h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .letter-circle {
@@ -91,6 +58,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2em 0em;
 }
 
 .category-container {

@@ -37,7 +37,7 @@ export const Search = () => {
             {query.charAt(0).toUpperCase() + query.substring(1)} Meals
           </h1>
         </div>
-        {searchResults.length > 0 && (
+        {searchResults?.length > 0 && (
           <div className="meals">
             {searchResults.map((item, index) => (
               <MealCard

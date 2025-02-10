@@ -15,6 +15,7 @@ export const MealCard = (props) => {
           loading="lazy"
         />
         <h3 className="meal-name">{name}</h3>
+        <h6 className="view-recipe">View Recipe</h6>
       </Link>
     </>
   );

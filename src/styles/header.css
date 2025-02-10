@@ -2,7 +2,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.2em 0.5em;
+  padding: 0.4em 0.5em;
+  box-shadow: 0 8px 16px rgba(248, 238, 238, 0.5);
+  position: sticky;
+  background-color: white;
+  z-index: 1000;
+  top: 0;
+}
+
+.search-container {
+  display: flex;
+  background-color: white;
+  width: 30%;
+  align-items: center;
+  border-radius: 30px;
+  gap: 10px;
+  padding: 0.2em 0.8em;
+  border: 1px solid #f49427;
+  flex-basis: 33.33%;
+}
+
+.search-input {
+  border: none;
+  height: 36px;
+  width: 95%;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+#search-icon {
+  color: grey;
 }
 
 .navlink {
@@ -23,12 +54,12 @@
 
 .nav-wrapper {
   display: flex;
-  flex-basis: 20%;
+  flex-basis: 33.33%;
   justify-content: space-between;
   align-items: center;
-  margin-right: 0.5em;
   font-family: "Gilroy-Bold";
   font-size: 1.2rem;
+  padding-left: 9em;
 }
 
 .login-button {
