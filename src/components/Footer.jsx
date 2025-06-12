@@ -1,25 +1,18 @@
 const Footer = () => {
   return (
-    <div
-      style={{
-        height: "6vh",
-        backgroundColor: "#f49427",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <p
-        style={{
-          textAlign: "center",
-          fontSize: "1.1rem",
-          color: "white",
-          fontFamily: "Girloy-Bold",
-        }}
-      >
-        All rights reserved &#xA9; 2025 Cookery-Guide.
-      </p>
-    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400">
+      <path
+        fill="#f49427"
+        fillOpacity="0.4"
+        d="M0,50L60,60.7C120,71,240,93,360,108.7C480,125,600,135,720,114C840,93,960,39,1080,23.3C1200,7,1320,29,1380,39.3L1440,50L1440,350L1380,350C1320,350,1200,350,1080,350C960,350,840,350,720,350C600,350,480,350,360,350C240,350,120,350,60,350L0,350Z"
+      ></path>
+
+      <path
+        fill="#f49427"
+        fillOpacity="1"
+        d="M0,96L60,106.7C120,117,240,139,360,154.7C480,171,600,181,720,160C840,139,960,85,1080,69.3C1200,53,1320,75,1380,85.3L1440,96L1440,400L1380,400C1320,400,1200,400,1080,400C960,400,840,400,720,400C600,400,480,400,360,400C240,400,120,400,60,400L0,400Z"
+      ></path>
+    </svg>
   );
 };
 

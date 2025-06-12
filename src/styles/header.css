@@ -2,12 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.4em 0.5em;
-  box-shadow: 0 8px 16px rgba(248, 238, 238, 0.5);
-  position: sticky;
-  background-color: white;
-  z-index: 1000;
-  top: 0;
+  padding: 0.4em 1em;
+  position: relative;
 }
 
 .search-container {
@@ -38,7 +34,9 @@
 
 .navlink {
   text-decoration: none;
-  color: #f08000;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .navlink:hover {
@@ -53,23 +51,41 @@
 }
 
 .nav-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
-  flex-basis: 33.33%;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Gilroy-Bold";
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  width: 100%;
+  z-index: 100;
+  padding: 1em;
+  background-color: rgb(244, 148, 39, 0.7);
+  font-family: "Gilroy-Semibold";
   font-size: 1.2rem;
-  padding-left: 9em;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 .login-button {
   background: none;
   font-family: "Gilroy-Bold";
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border: none;
   color: white;
   background-color: #f49427;
-  padding: 0.1em 0.5em;
+  padding: 0.1em 1em;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -97,4 +113,10 @@
 
 .error-section {
   padding-top: 1em;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
 }

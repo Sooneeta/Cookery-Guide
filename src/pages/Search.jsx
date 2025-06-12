@@ -10,8 +10,10 @@ export const Search = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("s");
   const [loading, setLoading] = useState(true);
+  const [delayedClass, setDelayedClass] = useState("");
 
   useEffect(() => {
+    let timeout;
     if (query) {
       getMealBySearch(query)
         .then((response) => {
@@ -22,7 +24,11 @@ export const Search = () => {
         .catch((error) => {
           console.error("Error fetching data:", error);
         });
+      timeout = setTimeout(() => {
+        setDelayedClass("header-animation");
+      }, 3000);
     }
+    return () => clearTimeout(timeout);
   }, [query]);
 
   if (loading) {
@@ -33,7 +39,7 @@ export const Search = () => {
     <>
       <div className="wrapper">
         <div className="headerWrapper">
-          <h1 className="header">
+          <h1 className={`header ${delayedClass}`}>
             {query.charAt(0).toUpperCase() + query.substring(1)} Meals
           </h1>
         </div>

@@ -1,39 +1,42 @@
 .landing-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 1em 0em 0em 2em;
-}
-
-.text-section {
-  color: #f08000;
-  display: flex;
   flex-direction: column;
-  gap: 1em;
-  padding: 4em 0em 0em 3em;
+  padding: 2em 1em;
 }
 
-h1 {
-  font-family: "Gilroy-Bold";
-}
-
-p {
-  font-family: "Gilroy-Regular";
-  font-size: 1.3rem;
-  padding-top: 0.8em;
-}
-
-.signup-button {
-  background-color: #f49427;
-  color: white;
-  border: none;
-  font-family: "Gilroy-Bold";
-  font-size: 1.2rem;
-  border-radius: 5px;
-  padding: 0.2em 0.8em;
-  cursor: pointer;
+.heading-section {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0.3em;
+  padding: 2em 0em;
+
+  h1 {
+    font-family: "Gilroy-Bold";
+    font-size: 2.5rem;
+  }
+}
+
+.desc-section {
+  padding: 2em 0em;
+  p {
+    font-family: "Gilroy-Regular";
+    font-size: 1.2rem;
+    padding-top: 0.8em;
+    color: black;
+  }
+
+  .signup-button {
+    background-color: #f49427;
+    color: white;
+    border: none;
+    font-family: "Gilroy-Bold";
+    font-size: 1.5rem;
+    border-radius: 3em;
+    padding: 0.2em 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3em;
+  }
 }

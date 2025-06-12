@@ -34,32 +34,28 @@ export const Landing = () => {
   return (
     <>
       <div className="landing-wrapper">
-        <section className="text-section">
-          <span>
-            <h1>
-              A <span>Receipe</span> of
-              <br />
-              happiness :)
-              <br />
-              Cook like a chef
-            </h1>
-
-            <p>
-              Start a delicious journey, where tasty discoveries
-              <br />
-              and flavorful creations await your every craving.
-            </p>
-          </span>
-
-          <span>
-            <button className="signup-button" onClick={handleSignUpClick}>
-              Sign up
-            </button>
-          </span>
+        <section className="heading-section">
+          <h1>
+            A <span>Receipe</span> of
+            <br />
+            happiness :)
+            <br />
+            Cook like a chef
+          </h1>
+          <figure className="img-section">
+            <img src={FoodImage} alt="food-image" width={200} loading="lazy" />
+          </figure>
         </section>
-        <figure className="img-section">
-          <img src={FoodImage} alt="food-image" width={560} loading="lazy" />
-        </figure>
+        <section className="desc-section">
+          <p>
+            Start a delicious journey, where tasty discoveries and flavorful
+            creations await your every craving.
+          </p>
+
+          <button className="signup-button" onClick={handleSignUpClick}>
+            Sign up
+          </button>
+        </section>
       </div>
     </>
   );

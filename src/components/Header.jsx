@@ -9,11 +9,14 @@ import { FaSearch } from "react-icons/fa";
 import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdClear } from "react-icons/md";
 
 export const Header = () => {
   const [searchValue, setSearchValue] = useState("");
   const [searchParams, setSearchParams] = useSearchParams();
   const [showSearchField, setShowSearchField] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
   const { user, logOut } = useUserAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,11 +53,13 @@ export const Header = () => {
     }
   };
 
+  console.log("user", user);
+
   return (
     <>
       <header className="header-wrapper">
-        <NavLink to="/" style={{ flexBasis: "33.33%" }}>
-          <img src={TitleIcon} alt="title-icon" width={130} loading="lazy" />
+        <NavLink to="/">
+          <img src={TitleIcon} alt="title-icon" width={140} loading="lazy" />
         </NavLink>
         {showSearchField && (
           <section className="search-container">
@@ -69,47 +74,61 @@ export const Header = () => {
             ></input>
           </section>
         )}
-
-        <nav className="nav-wrapper">
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "navlink active" : "navlink"
-            }
-            to="/home"
-          >
-            Home
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "navlink active" : "navlink"
-            }
-            to="/categories"
-          >
-            Categories
-          </NavLink>
-          {user ? (
-            <div className="profile-section">
-              <img
-                // src={user.photoURL || "default-profile.png"}
-                src={user.photoURL ? user.photoURL : <FaUserCircle />}
-                alt="profile"
-                className="profile-pic"
-              />
-
-              <button className="logout-button" onClick={handleLogout}>
-                <MdOutlineLogout
-                  size="1.5rem"
-                  title="Click to Logout!"
-                  color="gray"
-                />
+        <GiHamburgerMenu
+          color="black"
+          size={24}
+          onClick={() => setShowNavbar(true)}
+        />
+        {showNavbar && (
+          <nav className="nav-wrapper">
+            <MdClear
+              size={30}
+              color="white"
+              style={{ alignSelf: "flex-end", cursor: "pointer" }}
+              onClick={() => setShowNavbar(false)}
+            />
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "navlink active" : "navlink"
+              }
+              to="/home"
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "navlink active" : "navlink"
+              }
+              to="/categories"
+            >
+              Categories
+            </NavLink>
+            {user ? (
+              <div>
+                {user?.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt="profile"
+                    className="profile-pic"
+                  />
+                ) : (
+                  <FaUserCircle size={30} />
+                )}
+                <button className="logout-button" onClick={handleLogout}>
+                  <MdOutlineLogout
+                    size="1.5rem"
+                    title="Click to Logout!"
+                    color="gray"
+                  />
+                </button>
+              </div>
+            ) : (
+              <button className="login-button" onClick={handleLogin}>
+                Login
               </button>
-            </div>
-          ) : (
-            <button className="login-button" onClick={handleLogin}>
-              Login
-            </button>
-          )}
-        </nav>
+            )}
+          </nav>
+        )}
       </header>
     </>
   );
