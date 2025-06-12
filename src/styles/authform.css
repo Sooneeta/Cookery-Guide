@@ -8,13 +8,18 @@
   font-family: "Gilroy-Bold";
 }
 
+.form-header {
+  font-size: 2.8rem;
+}
+
 .form-wrapper {
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3em 2em;
+  width: 90%;
+  padding: 3.5em 0;
   border-radius: 20px;
 }
 
@@ -31,7 +36,7 @@
 }
 
 .form-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-family: "Gilroy-Regular";
   font-weight: 600;
 }
@@ -40,6 +45,7 @@
 .password-input {
   border: none;
   padding: 0.4em;
+  font-size: 1.2rem;
   background-color: antiquewhite;
 }
 
@@ -57,11 +63,13 @@
   background-color: antiquewhite;
   align-items: center;
   border-radius: 10px;
+  width: 95%;
 }
 
 form {
-  padding: 3em 1em 1em 1em;
   display: flex;
+  padding: 2em 0;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   gap: 1em;
@@ -73,14 +81,14 @@ form {
   font-family: "Gilroy-Bold";
   background-color: #f49427;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 55px;
   cursor: pointer;
 }
 
 .link-text {
   padding-top: 3.5em;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .link {

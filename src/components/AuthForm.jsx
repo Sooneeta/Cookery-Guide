@@ -39,7 +39,7 @@ export const AuthForm = ({
       <div className="form-container">
         <div className="form-wrapper">
           <section className="title-section">
-            <h2 className="form-header">{title}</h2>
+            <h1 className="form-header">{title}</h1>
             <span className="form-subtitle">{subtitle}</span>
           </section>
           <section className="error-section">
@@ -47,7 +47,7 @@ export const AuthForm = ({
           </section>
           <form onSubmit={handleSubmit}>
             <section className="email-section">
-              <MdEmail />
+              <MdEmail size={30} />
               <input
                 className="email-input"
                 type="text"
@@ -58,7 +58,7 @@ export const AuthForm = ({
               />
             </section>
             <section className="password-section">
-              <CiLock />
+              <CiLock size={30} />
               <input
                 className="password-input"
                 type="password"
