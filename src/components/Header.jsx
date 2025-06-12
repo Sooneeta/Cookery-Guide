@@ -53,14 +53,25 @@ export const Header = () => {
     }
   };
 
-  console.log("user", user);
-
   return (
     <>
       <header className="header-wrapper">
-        <NavLink to="/">
-          <img src={TitleIcon} alt="title-icon" width={140} loading="lazy" />
-        </NavLink>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <NavLink to="/">
+            <img src={TitleIcon} alt="title-icon" width={140} loading="lazy" />
+          </NavLink>
+          <GiHamburgerMenu
+            color="black"
+            size={24}
+            onClick={() => setShowNavbar(true)}
+          />
+        </div>
         {showSearchField && (
           <section className="search-container">
             <FaSearch id="search-icon" />
@@ -74,11 +85,6 @@ export const Header = () => {
             ></input>
           </section>
         )}
-        <GiHamburgerMenu
-          color="black"
-          size={24}
-          onClick={() => setShowNavbar(true)}
-        />
         {showNavbar && (
           <nav className="nav-wrapper">
             <MdClear
@@ -104,7 +110,7 @@ export const Header = () => {
               Categories
             </NavLink>
             {user ? (
-              <div>
+              <div style={{ display: "flex" }}>
                 {user?.photoURL ? (
                   <img
                     src={user.photoURL}
@@ -116,9 +122,9 @@ export const Header = () => {
                 )}
                 <button className="logout-button" onClick={handleLogout}>
                   <MdOutlineLogout
-                    size="1.5rem"
+                    size={35}
                     title="Click to Logout!"
-                    color="gray"
+                    color="white"
                   />
                 </button>
               </div>

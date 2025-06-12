@@ -10,15 +10,14 @@ export const CategoryMealCard = ({ name, image }) => {
             className="image-by-category"
             src={image}
             alt={name}
-            width={250}
-            height={150}
+            width={150}
           />
         </Link>
         <h3
           style={{
             padding: "0.8em",
             fontFamily: "Gilroy-Bold",
-            fontSize: "1.3rem",
+            fontSize: "1.1rem",
           }}
         >
           {name}

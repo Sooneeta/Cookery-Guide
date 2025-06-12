@@ -1,6 +1,6 @@
 .meal-container {
   padding: 1.5em 0px;
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: grid;
   box-shadow: 0 4px 8px rgba(192, 182, 182, 0.8);
@@ -22,7 +22,7 @@
 .meal-name {
   padding-top: 0.5em;
   font-family: "Gilroy-Bold";
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .view-recipe {

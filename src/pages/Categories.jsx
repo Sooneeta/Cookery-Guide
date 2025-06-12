@@ -15,7 +15,6 @@ export const Categories = () => {
   const getCategories = () => {
     getMealByCategories()
       .then((response) => {
-        console.log("API Response:", response.data.categories);
         setCategory(response?.data?.categories);
         setLoading(false);
       })

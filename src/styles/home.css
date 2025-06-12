@@ -1,5 +1,5 @@
 .letter-circle-container {
-  padding: 5em 1em 2em;
+  padding: 2.5em 0em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -35,9 +35,9 @@ h3 {
 
 .letter-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2em 1em;
-  row-gap: 3em;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2em 0em;
+  gap: 2em;
   width: 80vw;
   place-items: center;
   animation: slideIn 0.5s ease-out forwards;

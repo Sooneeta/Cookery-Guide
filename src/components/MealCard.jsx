@@ -11,7 +11,7 @@ export const MealCard = (props) => {
           className="meal-image"
           src={image}
           alt={name}
-          width={170}
+          width={130}
           loading="lazy"
         />
         <h3 className="meal-name">{name}</h3>

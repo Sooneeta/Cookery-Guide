@@ -1,26 +1,27 @@
 .header-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
   padding: 0.4em 1em;
   position: relative;
 }
 
 .search-container {
+  align-self: center;
   display: flex;
   background-color: white;
-  width: 30%;
+  width: 100%;
   align-items: center;
   border-radius: 30px;
   gap: 10px;
   padding: 0.2em 0.8em;
   border: 1px solid #f49427;
-  flex-basis: 33.33%;
 }
 
 .search-input {
   border: none;
-  height: 36px;
+  padding: 0.5em 0.1em;
+  font-size: 1.2rem;
   width: 95%;
 }
 
@@ -44,10 +45,8 @@
 }
 
 .navlink.active {
-  color: white;
-  background-color: #f49427;
-  border-radius: 5px;
-  padding: 0.1em 0.5em;
+  text-decoration-line: underline;
+  text-underline-offset: 0.3em;
 }
 
 .nav-wrapper {
