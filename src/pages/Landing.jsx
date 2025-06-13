@@ -43,7 +43,7 @@ export const Landing = () => {
             Cook like a chef
           </h1>
           <figure className="img-section">
-            <img src={FoodImage} alt="food-image" width={200} loading="lazy" />
+            <img src={FoodImage} alt="food-image" width={180} loading="lazy" />
           </figure>
         </section>
         <section className="desc-section">
