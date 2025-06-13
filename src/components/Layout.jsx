@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
+import "../styles/layout.css";
 
 export const Layout = ({ children }) => {
   const location = useLocation();
@@ -15,12 +16,13 @@ export const Layout = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-      >
+      <div className="layout-wrapper">
         {showLayout && <Header />}
 
-        <main style={{ flex: 1, padding: showLayout ? "2em 1em" : "" }}>
+        <main
+          style={{ padding: showLayout ? "1.2em 1em" : "" }}
+          className="main-section"
+        >
           {children}
         </main>
 

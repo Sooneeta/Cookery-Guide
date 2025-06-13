@@ -14,14 +14,14 @@
   align-items: center;
   border-radius: 30px;
   gap: 10px;
-  padding: 0.2em 0.8em;
+  padding: 0.1em 0.8em;
   border: 1px solid #f49427;
 }
 
 .search-input {
   border: none;
-  padding: 0.5em 0.1em;
-  font-size: 1.2rem;
+  padding: 0.4em 0.1em;
+  font-size: 1.1rem;
   width: 95%;
 }
 
@@ -36,7 +36,7 @@
 .navlink {
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -115,7 +115,15 @@
 }
 
 @media (min-width: 768px) {
-}
+  .search-container {
+    width: 85%;
+  }
 
-@media (min-width: 1024px) {
+  .navlink {
+    font-size: 1.1rem;
+  }
+
+  .search-input {
+    font-size: 1rem;
+  }
 }

@@ -44,39 +44,40 @@ export const MealDetails = () => {
     <>
       {meal ? (
         <div className="meal-details-container">
-          <div className="meal-image">
-            <img src={meal?.strMealThumb} alt={meal?.strMeal} />
-          </div>
+          <div className="meal-details">
+            <div className="meal-image">
+              <img src={meal?.strMealThumb} alt={meal?.strMeal} />
+            </div>
 
-          <div className="meal-info">
-            <h1 style={{ fontFamily: "Gilroy-Bold", color: "#F49427" }}>
-              {meal?.strMeal}
-            </h1>
-            <p className="meal-category">
-              <b>Category: </b>
+            <div className="meal-info">
+              <h1 style={{ fontFamily: "Gilroy-Bold", color: "#F49427" }}>
+                {meal?.strMeal}
+              </h1>
+              <p className="meal-category">
+                <b>Category: </b>
 
-              <Link className="link" to={`/category/${meal?.strCategory}`}>
-                {meal?.strCategory}
-              </Link>
-            </p>
-            <p className="meal-area">
-              <b>Area: </b>
-              <Link className="link" to={`/area/${meal?.strArea}`}>
-                {meal?.strArea}
-              </Link>
-            </p>
-            <div className="meal-ingredients">
-              <h3>Ingredients:</h3>
-              <ul>
-                {meal?.strIngredient.map((ingredientObj, index) => (
-                  <li key={index}>
-                    {`${ingredientObj.measure} ${ingredientObj.ingredient}`}
-                  </li>
-                ))}
-              </ul>
+                <Link className="link" to={`/category/${meal?.strCategory}`}>
+                  {meal?.strCategory}
+                </Link>
+              </p>
+              <p className="meal-area">
+                <b>Area: </b>
+                <Link className="link" to={`/area/${meal?.strArea}`}>
+                  {meal?.strArea}
+                </Link>
+              </p>
             </div>
           </div>
-
+          <div className="meal-ingredients">
+            <h3>Ingredients:</h3>
+            <ul>
+              {meal?.strIngredient.map((ingredientObj, index) => (
+                <li key={index}>
+                  {`${ingredientObj.measure} ${ingredientObj.ingredient}`}
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className="meal-instructions">
             <h2>Instructions</h2>
             <p>{meal?.strInstructions}</p>

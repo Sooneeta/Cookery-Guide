@@ -36,14 +36,20 @@ export const Landing = () => {
       <div className="landing-wrapper">
         <section className="heading-section">
           <h1>
-            A <span>Receipe</span> of
+            A <span>Receipe</span>
             <br />
-            happiness :)
+            of
             <br />
-            Cook like a chef
+            happiness
+            <br />
+            :)
+            <br />
+            Cook like a
+            <br />
+            chef
           </h1>
           <figure className="img-section">
-            <img src={FoodImage} alt="food-image" width={180} loading="lazy" />
+            <img src={FoodImage} alt="food-image" loading="lazy" />
           </figure>
         </section>
         <section className="desc-section">

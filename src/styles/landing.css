@@ -1,8 +1,9 @@
 .heading-section {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 2em 0em;
+  padding: 1em 0em;
 
   h1 {
     font-family: "Gilroy-Bold";
@@ -10,8 +11,14 @@
   }
 }
 
+.img-section {
+  img {
+    width: 50vw;
+  }
+}
+
 .desc-section {
-  padding: 2em 0em;
+  padding: 1em 0em;
   p {
     font-family: "Gilroy-Regular";
     font-size: 1.2rem;
@@ -24,7 +31,7 @@
     color: white;
     border: none;
     font-family: "Gilroy-Bold";
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: 3em;
     padding: 0.2em 1.5em;
     cursor: pointer;
@@ -32,5 +39,28 @@
     align-items: center;
     justify-content: center;
     gap: 0.3em;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+  .img-section {
+    img {
+      width: 30vw;
+    }
+  }
+
+  .desc-section {
+    max-width: 50vw;
+  }
+
+  .heading-section {
+    padding: 0;
+  }
+
+  .desc-section {
+    padding: 0;
   }
 }

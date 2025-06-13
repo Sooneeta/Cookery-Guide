@@ -58,3 +58,20 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 768px) {
+  .meals-container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .letter-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .letter-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

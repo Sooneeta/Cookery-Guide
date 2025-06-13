@@ -21,3 +21,17 @@ wrapper {
   width: 100%;
   padding: 3em 0;
 }
+
+@media (min-width: 768px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .meals {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

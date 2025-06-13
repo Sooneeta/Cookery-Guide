@@ -12,6 +12,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.meal-image {
+  width: 30vw;
+}
+
 .meal-container:hover {
   background-color: #f49427;
   color: white;
@@ -32,4 +36,16 @@
 
 .meal-container:hover .view-recipe {
   color: black;
+}
+
+@media (min-width: 768px) {
+  .meal-image {
+    width: 18vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .meal-image {
+    width: 10vw;
+  }
 }

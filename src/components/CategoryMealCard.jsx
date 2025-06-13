@@ -6,12 +6,7 @@ export const CategoryMealCard = ({ name, image }) => {
     <>
       <div className="c-meal-container">
         <Link to={`/category/${name}`}>
-          <img
-            className="image-by-category"
-            src={image}
-            alt={name}
-            width={150}
-          />
+          <img className="image-by-category" src={image} alt={name} />
         </Link>
         <h3
           style={{
