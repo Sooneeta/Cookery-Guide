@@ -1,9 +1,10 @@
 .loader {
   display: flex;
+  flex-direction: column;
   gap: 1em;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
 }
 
 .spinner {

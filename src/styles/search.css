@@ -12,44 +12,6 @@ wrapper {
   font-family: "Gilroy-Bold";
   text-align: center;
   text-decoration-line: underline;
-  padding-top: 1em;
-  animation: flicker 1.5s infinite alternate, moveGradient 3s linear infinite;
-}
-
-@keyframes flicker {
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    opacity: 1;
-  }
-  20%,
-  24%,
-  55% {
-    opacity: 0.4;
-  }
-}
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes slideText {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 .meals {
@@ -57,5 +19,5 @@ wrapper {
   grid-template-columns: repeat(2, 1fr);
   gap: 2em;
   width: 100%;
-  padding: 3em 1em;
+  padding: 3em 0;
 }

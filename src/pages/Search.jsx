@@ -10,10 +10,8 @@ export const Search = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("s");
   const [loading, setLoading] = useState(true);
-  const [delayedClass, setDelayedClass] = useState("");
 
   useEffect(() => {
-    let timeout;
     if (query) {
       getMealBySearch(query)
         .then((response) => {

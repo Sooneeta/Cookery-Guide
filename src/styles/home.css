@@ -38,7 +38,6 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   padding: 2em 0em;
   gap: 2em;
-  width: 80vw;
   place-items: center;
   animation: slideIn 0.5s ease-out forwards;
 }
@@ -58,25 +57,4 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em 0em;
-}
-
-.category-container {
-  width: 100%;
-  font-family: "Gillroy-Bold";
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  gap: 4em;
-  margin-top: 2.5%;
-  padding: 2em;
-}
-
-.category-heading {
-  background-color: #ffd580;
-  color: white;
-  font-size: 3.5rem;
-  width: 100%;
-  font-family: "Gilroy-Bold";
 }
