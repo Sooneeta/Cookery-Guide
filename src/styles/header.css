@@ -127,3 +127,9 @@
     font-size: 1rem;
   }
 }
+
+@media (min-width: 1024px) {
+  .search-container {
+    width: 77.5%;
+  }
+}
