@@ -20,7 +20,9 @@ export const Layout = ({ children }) => {
       >
         {showLayout && <Header />}
 
-        <main style={{ flex: 1, padding: "2em 1em" }}>{children}</main>
+        <main style={{ flex: 1, padding: showLayout ? "2em 1em" : "" }}>
+          {children}
+        </main>
 
         {showLayout && <Footer />}
       </div>
