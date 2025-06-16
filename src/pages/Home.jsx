@@ -63,14 +63,6 @@ export const Home = () => {
             </div>
           ))}
         </div>
-        {/* <h3 style={{ color: " #f49427", fontFamily: "sans-serif" }}>
-          Meals starting with{" "}
-          <span style={{ color: "#E49B0F" }}>
-            {"'"}
-            {selectedLetter}
-            {"'"}
-          </span>
-        </h3> */}
 
         <div className="letter-container">
           {letterfilteredMeals.map((item, index) => (
