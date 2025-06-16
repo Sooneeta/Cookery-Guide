@@ -48,20 +48,20 @@ export const Landing = () => {
             <br />
             chef
           </h1>
-          <figure className="img-section">
-            <img src={FoodImage} alt="food-image" loading="lazy" />
-          </figure>
-        </section>
-        <section className="desc-section">
-          <p>
-            Start a delicious journey, where tasty discoveries and flavorful
-            creations await your every craving.
-          </p>
+          <section className="desc-section">
+            <p>
+              Start a delicious journey, where tasty discoveries and flavorful
+              creations await your every craving.
+            </p>
 
-          <button className="signup-button" onClick={handleSignUpClick}>
-            Sign up
-          </button>
+            <button className="signup-button" onClick={handleSignUpClick}>
+              Sign up
+            </button>
+          </section>
         </section>
+        <figure className="img-section">
+          <img src={FoodImage} alt="food-image" loading="lazy" />
+        </figure>
       </div>
     </>
   );
