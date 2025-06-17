@@ -14,7 +14,6 @@ export const Categorymeal = () => {
     if (categoryName) {
       getMealByCategory(categoryName)
         .then((response) => {
-          console.log("API Response:", response.data);
           setCategoryMealResults(response?.data?.meals);
           setLoading(false);
         })

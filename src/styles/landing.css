@@ -22,18 +22,20 @@
 }
 
 .desc-section {
-  background: #c3cfe2;
-  padding: 1em;
+  background: rgba(245, 245, 245, 0.3);
+
+  border: 1px solid #f49427;
+  text-align: justify;
+  padding: 0.7em;
   border-radius: 1em;
   p {
-    font-family: "Gilroy-Regular";
+    font-family: "Lora", serif;
     font-size: 1.2rem;
-
     color: #555;
   }
 
   .signup-button {
-    background-color: #f49427;
+    background: #f49427;
     color: white;
     border: none;
     font-family: "Gilroy-Bold";
@@ -46,6 +48,10 @@
     justify-content: center;
     gap: 0.3em;
   }
+}
+
+.signup-button:hover {
+  background: #d87a16;
 }
 
 @media (min-width: 1024px) {
